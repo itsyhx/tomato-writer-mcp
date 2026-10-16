@@ -1,0 +1,60 @@
+{
+  "name": "tomato-writer-mcp",
+  "version": "2.0.0",
+  "description": "番茄小说作家后台 MCP Server — 让 AI 助手直接管书、发章节、盯数据，零浏览器依赖",
+  "license": "MIT",
+  "type": "module",
+  "author": "Harrison Yin",
+  "homepage": "https://github.com/itsyhx/tomato-writer-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsyhx/tomato-writer-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itsyhx/tomato-writer-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "fanqie",
+    "fanqienovel",
+    "番茄小说",
+    "番茄免费小说",
+    "网文",
+    "作家助手",
+    "novel",
+    "web-novel",
+    "claude",
+    "cursor",
+    "ai-agent",
+    "llm"
+  ],
+  "bin": {
+    "tomato-writer-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "smoke": "tsx scripts/smoke.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
